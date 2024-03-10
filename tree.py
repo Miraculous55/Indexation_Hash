@@ -10,7 +10,6 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 ORDER=3
-MAX_LEVEL = 10
 
 # Arbre B-tree
 class BTreeNode:
@@ -57,7 +56,8 @@ class BTreeNode:
                 if not self.children:  # If the node is a leaf
                     self.children = [new_node]
                 else:
-                    self.children.insert(index + 1, new_node)
+                    self.children.insert(index, new_node)
+
 
     def delete(self, key):
         if key in self.keys:
