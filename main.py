@@ -218,8 +218,9 @@ def b_tree_level():
         info_text = small_font.render("Bienvenue dans l'application d'indexation !", True, BLACK)
         screen.blit(info_text, (200, 10))
 
-        # Dessiner l'arbre
-        root_node.draw(screen, 200, 200, 0)
+        # Dessiner l'arbre centré sous les boutons
+        root_node_x = (WIDTH - (len(root_node.keys) + 1) * 40) // 2
+        root_node.draw(screen, root_node_x, 200, 0)
 
         pygame.display.flip()
 
